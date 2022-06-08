@@ -59,7 +59,7 @@
     [centos@centos7 Alation_assisgnment]$ kubectl get svc
     NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE
     kubernetes   ClusterIP      10.96.0.1       <none>         443/TCP          3d21h
-    lb-svc       LoadBalancer   10.97.6.169     192.168.49.3   5000:31987/TCP   3m3s
+    lb-svc       LoadBalancer   10.97.6.169     <pending>   5000:31987/TCP   3m3s
     redis        ClusterIP      10.101.209.60   <none>         6379/TCP         3m3s
    ```
 7. Verify application
@@ -70,4 +70,24 @@
     [centos@centos7 Alation_assisgnment]$ curl $(minikube service lb-svc --url)
     Hola! we have hit 2 times
     [centos@centos7 Alation_assisgnment]$
+    ```
+
+# Bonus questions
+1. Brief summary of what you liked about your solution
+    ```
+    😅 Finally working prototype is working
+    🚩 Option to update the replicaset
+    💡 Option to update image and tags
+    🎈 Image customization option.
+    ```
+2. Briefly summarize of what you disliked about your solution
+    ```
+    😟 There are lot of things which could be done in a better way as per the industry standards.
+    🚀 Can give more customization option in value.yaml file like:
+        - resources
+        - image pull policy
+        - Option for Load Balancer IP
+        - etc etc
+    🌋 Redis can also be deployed as deployemnt and can have replications but as I'm using minikube it has some limitation with storage class. So won't be able to implement that in this solution.
+    🔥 More comments must be added to enhance readability.
     ```
