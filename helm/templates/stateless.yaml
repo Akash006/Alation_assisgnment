@@ -6,7 +6,7 @@ metadata:
     app: my-dep
   name: my-dep
 spec:
-  replicas: 2
+  replicas: {{ .Values.web.replicaCount | int }}
   selector:
     matchLabels:
       app: my-dep
@@ -22,7 +22,7 @@ spec:
         app: my-dep
     spec:
       containers:
-      - image: akash006/alation_web
+      - image: {{ include "web-image-url" .}}
         name: alation-web-n9fbk
         ports:
         - containerPort: 5000

@@ -1,11 +1,10 @@
 redis:
-   replicaCount: 2
    image:
       name: redis
       tag: alpine
 
-web-app:
+web:
    replicaCount: 2
    image:
-      name: alation_web
+      name: akash006/alation_web
       tag: latest
