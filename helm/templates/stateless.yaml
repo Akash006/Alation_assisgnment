@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-dep
+  name: my-dep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-dep
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-dep
+    spec:
+      containers:
+      - image: akash006/alation_web
+        name: alation-web-n9fbk
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}
