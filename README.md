@@ -75,7 +75,7 @@
 # Bonus questions
 1. Brief summary of what you liked about your solution
     ```
-    😅 Finally working prototype is working
+    😅 Finally working prototype is ready
     🚩 Option to update the replicaset
     💡 Option to update image and tags
     🎈 Image customization option.
